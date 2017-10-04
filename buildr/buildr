@@ -1,0 +1,11 @@
+#!/bin/bash
+
+case $1 in
+  new)
+    echo "Error: A project name must be given after the command 'new'"
+    exit 1
+    ;;
+  *)
+    echo "Error: Unrecognized command. Please refer to the documentation for all functionality."
+    ;;
+esac
