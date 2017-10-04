@@ -8,3 +8,8 @@ execute_new_command() {
     echo "Building workspace for project '${1}'"
   fi
 }
+
+create_base_folders() {
+  mkdir $1
+  mkdir {$1/config,$1/lib,$1/test}
+}
