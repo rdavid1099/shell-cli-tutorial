@@ -9,7 +9,8 @@ execute_new_command() {
   fi
 }
 
-create_base_folders() {
+create_base_directories() {
   mkdir $1
   mkdir {$1/config,$1/lib,$1/test}
+  touch $1/config/.keep && touch $1/lib/.keep
 }

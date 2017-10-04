@@ -13,8 +13,8 @@ teardown() {
   rm -rf testing
 }
 
-@test "it creates the base folders of a Ruby workspace" {
-  create_base_folders testrb
+@test "it creates the base directories of a Ruby workspace" {
+  create_base_directories testrb
 
   [ -d "./testrb/" ]
   [ -d "./testrb/lib/" ]
