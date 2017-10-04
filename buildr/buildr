@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export PARENT_PATH=$(cd "$(dirname "$0")"; pwd)
+source $PARENT_PATH/lib/new/new.sh
+
+case $1 in
+  new)
+    shift
+    execute_new_command $@
+    ;;
+  *)
+    echo "Error: Unrecognized command. Please refer to the documentation for all functionality."
+    exit 1
+    ;;
+esac
