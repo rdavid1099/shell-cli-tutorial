@@ -6,6 +6,15 @@ execute_new_command() {
     exit 1
   else
     echo "Building workspace for project '${1}'"
+    create_base_directories $1
+    cd $1
+    create_gitignore_file
+    create_gemfile_file
+    create_rakefile_file
+    create_readme_file $1
+    cd test
+    create_test_helper_file
+    exit
   fi
 }
 
