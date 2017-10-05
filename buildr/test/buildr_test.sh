@@ -3,7 +3,7 @@
 load test_helper
 
 setup() {
-  mkdir testing
+  rm -rf testing && mkdir testing
   cd testing
 }
 
