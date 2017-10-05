@@ -49,3 +49,10 @@ teardown() {
   [ -e "./README.md" ]
   [ "$(head -n 1 README.md)" = "# testrb README" ]
 }
+
+@test "it creates test_helper file with contents" {
+  create_test_helper_file
+
+  [ -e "./test_helper.rb" ]
+  [ "$(head -n 1 test_helper.rb)" = "require 'minitest/autorun'" ]
+}
